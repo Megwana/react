@@ -1,12 +1,13 @@
 import './App.css';
-import FunctionalGreeting from "./components/FunctionalGreeting";
-import StatefulGreeting from "./components/StatefulGreeting";
-import HooksCounter from "./components/HooksCounter";
+import FunctionalGreeting from './components/FunctionalGreeting';
+import FunctionalGreetingWithProps from "./components/FunctionalGreetingWithProps";
+
 
 function App() {
   return (
     <div className="App">
       <FunctionalGreeting />
+      <FunctionalGreetingWithProps />
     </div>
   );
 }
