@@ -1,9 +1,11 @@
 import React from 'react'
 
-function conditionalRenderingFunctional() {
+function ConditionalRenderingFunctional(props) {
   return (
-    <div>conditionalRenderingFunctional</div>
+    <div>
+      <h1>{props.connected ? 'Connnected' : 'Not Connected'}</h1>
+    </div>
   )
 }
 
-export default conditionalRenderingFunctional
+export default ConditionalRenderingFunctional
