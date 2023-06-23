@@ -18,6 +18,8 @@ export class ControlledForm extends Component {
         return (
         <div>
             <form>
+                <h2>Please fill out the form below</h2>
+            <div>
                 <label htmlFor='id-name'>Your Name:</label>
                 <input 
                     value={this.state.name} 
@@ -25,7 +27,16 @@ export class ControlledForm extends Component {
                     id='id-name' 
                     type='text'
                     />
-                <input type='submit' value='Submit'/>
+                </div>
+            <div>
+                <label htmlFor='id-category'>Query category:</label>
+                <select id='id-category' name='category'>
+                    <option value='website'>Website Issue</option>
+                    <option value='order'>Order Issue</option>
+                    <option value='general'>General Inquiry</option>
+                </select>
+            </div>
+            <input type='submit' value='Submit'/>
             </form>
         </div>
         )
