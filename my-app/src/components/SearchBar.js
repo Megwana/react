@@ -9,6 +9,18 @@ export class SearchBar extends Component {
         names: importedNames
       }
     }
+
+    handleChange = (event) => {
+        const inputText = event.target.value.toLowerCase()
+        console.log(inputText)
+        const filterNames = importedNames.filter(name => {
+            return name.toLowerCase().includes(inputText)
+        })
+        this.setState({
+            names: filterNames
+        })
+    } 
+
   render() {
     return (
       <div>
@@ -18,6 +30,7 @@ export class SearchBar extends Component {
             <input
                 type="text"
                 placeholder='search names...'
+                onChange={(event) => this.handleChange(event)}
             />
         </form>
         <div style={{margin: 'auto'}}>
